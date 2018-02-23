@@ -59,15 +59,16 @@ function initialize(){
 				{id: ans.id}
 				], function(err, result){
 					if (err) throw err;
-					console.log("SOLD! Your total is $" + grandTotal.toFixed(2) + "\nYour item(s) will ship next August; \n*Must be home between 8 AM and 10 PM");
+					console.log("\nSOLD! Your total is $" + grandTotal.toFixed(2) + "\nYour item(s) will ship next August; \n*Must be home between 8 AM and 10 PM");
 				});
+
 			} else{
 				console.log("Sorry, there's not enough in stock!")
 			}
-			reprompt();
-			})
-	})
-}
+				reprompt();
+			});
+		});
+	}
 
 function reprompt(){
 	inquirer.prompt([{
